@@ -1,0 +1,36 @@
+{
+    "name": "Accesso",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "gruppo",
+            "otherEntityName": "gruppo",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "accesso"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "timeZone",
+            "otherEntityName": "timeZone",
+            "otherEntityRelationshipName": "accesso"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "dipendente",
+            "otherEntityName": "dipendente",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "accesso"
+        }
+    ],
+    "changelogDate": "20200206095608",
+    "entityTableName": "accesso",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

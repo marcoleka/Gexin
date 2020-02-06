@@ -1,0 +1,58 @@
+{
+    "name": "Dipendente",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "surname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ruolo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "codiceFiscale",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "reparto",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroScheda",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "schedaPersa",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "accesso",
+            "otherEntityName": "accesso",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "dipendente"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "log",
+            "otherEntityName": "log",
+            "otherEntityRelationshipName": "dipendente"
+        }
+    ],
+    "changelogDate": "20200206095613",
+    "entityTableName": "dipendente",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

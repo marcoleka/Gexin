@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="gruppo">
+            <h2><span>Gruppo</span> {{gruppo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Nome Gruppo</span></dt>
+                <dd>
+                    <span>{{gruppo.nomeGruppo}}</span>
+                </dd>
+                <dt><span>Door</span></dt>
+                <dd>
+                    <span *ngFor="let door of gruppo.doors; let last = last">
+                        <a [routerLink]="['/door', door?.id, 'view' ]">{{door.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/gruppo', gruppo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

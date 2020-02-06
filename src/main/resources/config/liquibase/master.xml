@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095608_added_entity_Accesso.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095609_added_entity_TimeZone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095610_added_entity_Door.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095611_added_entity_Gruppo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095612_added_entity_Log.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095613_added_entity_Dipendente.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200206095608_added_entity_constraints_Accesso.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095609_added_entity_constraints_TimeZone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095611_added_entity_constraints_Gruppo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095612_added_entity_constraints_Log.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200206095613_added_entity_constraints_Dipendente.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

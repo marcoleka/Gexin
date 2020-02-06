@@ -1,0 +1,104 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-time-zone-heading">Create or edit a Time Zone</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!timeZone.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="timeZone.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_da1">Da 1</label>
+                    <div class="d-flex">
+                        <input id="field_da1" type="datetime-local" class="form-control" name="da1" [(ngModel)]="da1"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_da2">Da 2</label>
+                    <div class="d-flex">
+                        <input id="field_da2" type="datetime-local" class="form-control" name="da2" [(ngModel)]="da2"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_da3">Da 3</label>
+                    <div class="d-flex">
+                        <input id="field_da3" type="datetime-local" class="form-control" name="da3" [(ngModel)]="da3"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_da4">Da 4</label>
+                    <div class="d-flex">
+                        <input id="field_da4" type="datetime-local" class="form-control" name="da4" [(ngModel)]="da4"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_a1">A 1</label>
+                    <div class="d-flex">
+                        <input id="field_a1" type="datetime-local" class="form-control" name="a1" [(ngModel)]="a1"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_a2">A 2</label>
+                    <div class="d-flex">
+                        <input id="field_a2" type="datetime-local" class="form-control" name="a2" [(ngModel)]="a2"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_a3">A 3</label>
+                    <div class="d-flex">
+                        <input id="field_a3" type="datetime-local" class="form-control" name="a3" [(ngModel)]="a3"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_a4">A 4</label>
+                    <div class="d-flex">
+                        <input id="field_a4" type="datetime-local" class="form-control" name="a4" [(ngModel)]="a4"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_giorno">Giorno</label>
+                    <select class="form-control" name="giorno" [(ngModel)]="timeZone.giorno" id="field_giorno" >
+                        <option value="LUNEDI">LUNEDI</option>
+                        <option value="MARTEDI">MARTEDI</option>
+                        <option value="MERCOLEDI">MERCOLEDI</option>
+                        <option value="GIOVEDI">GIOVEDI</option>
+                        <option value="VENRDI">VENRDI</option>
+                        <option value="SABATO">SABATO</option>
+                        <option value="DOMENICA">DOMENICA</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                        [(ngModel)]="timeZone.description" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_accesso">Accesso</label>
+                    <select class="form-control" id="field_accesso" name="accesso" [(ngModel)]="timeZone.accessoId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="accessoOption.id" *ngFor="let accessoOption of accessos; trackBy: trackAccessoById">{{accessoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+{
+    "name": "TimeZone",
+    "fields": [
+        {
+            "fieldName": "da1",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "da2",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "da3",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "da4",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "a1",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "a2",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "a3",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "a4",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "giorno",
+            "fieldType": "Day",
+            "fieldValues": "LUNEDI,MARTEDI,MERCOLEDI,GIOVEDI,VENRDI,SABATO,DOMENICA"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "accesso",
+            "otherEntityName": "accesso",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200206095609",
+    "entityTableName": "time_zone",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

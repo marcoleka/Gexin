@@ -1,0 +1,35 @@
+{
+    "name": "Gruppo",
+    "fields": [
+        {
+            "fieldName": "nomeGruppo",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "gruppo",
+            "relationshipName": "door",
+            "otherEntityName": "door",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "accesso",
+            "otherEntityName": "accesso",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "gruppo"
+        }
+    ],
+    "changelogDate": "20200206095611",
+    "entityTableName": "gruppo",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
